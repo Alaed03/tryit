@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/img1.png">  
+    <title>4ncode</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            min-width: 100%;
+            min-height: 100%;
+            background-image:url('images/smooth-gray-background-with-high-quality.jpg');
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            background-color: #190033;
+            box-shadow: 0px 2px 10px 4px;
+            color: #000000;
+            width: 80%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            transform: translateY(10px);
+            animation: moveUp 1s ease-out forwards;
+        }
+        .img{
+            margin: 50px;
+            padding-right: 40px;
+            opacity: 0;
+            border-right: solid 1px #ffffff;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(20px);
+            animation: moveUp 1s ease-out forwards;
+        }
+        .img img{
+            width: 250px;
+        }
+        .img h4{
+            color: #cfc8d3;
+        }
+        .img h4{
+            text-align:center;
+        }
+
+        .main2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .bar{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+        .bar1{
+            position: absolute;
+            top: 20px;
+        }
+        #bar2{
+            background-color: #6c12a4;
+            width: 18%;
+            height: 3px;
+            
+            z-index: 1111;
+            transform: translateX(-200%);
+            transition: 0.3s ease;
+        }
+        #bar3{
+            background-color: #c7c7c7;
+            width: 90%;
+            height: 3px;
+        }
+
+
+        .main4{
+            position:relative;
+            margin: 150px 0;
+            width: 100%;
+            height: 40vh;
+
+        }
+        .all{
+            position:absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transform: translateX(100px);
+            pointer-events: none;
+        }
+        .welcome{
+            width: 100%;
+            text-align: center;
+            margin: auto;
+        }
+        .welcome h2{
+            font-size: 70px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #e0b5fa, #be73ed, #9c2ce2,#a729f5,#e0b5fa);
+            background-size: 200%;
+            text-align: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 10px;
+            font-family: 'Yellowtail-Regular';
+            transform: translateX(20px);
+            animation:  gradiant 3s linear infinite;
+        }
+        .first_p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 30px;
+
+        }
+        .first_p h2{
+            margin-bottom: 20px;
+            color: #cfc8d3;
+            text-align: center;
+        }
+        .first_p .orders{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        .orders ul{
+            margin: 0 20px;
+            opacity: 0;
+            transform: translateX(20px);
+            animation: moveUp 2s ease-out forwards;
+        }
+        .first_p li{
+            color: #ffffff;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 50px;
+            width: 100%;
+            padding: 7px 10px ;
+            transform: translateX(20px);
+            animation: moveUp 2s ease-out forwards;
+
+        }
+        .last_p{
+            color: #cfc8d3;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+        }
+        .last_p h2{
+            margin-bottom: 5px;
+        }
+        .LeftSide{
+            margin: 0 10px;
+            color: #00bc00;
+        }
+
+        .choise{
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+        }
+
+        .choise2{
+            color: #aaaaaa;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: #cfc8d3;
+        }
+        .choise2 a{
+            margin: 0 15px;
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 10px;
+        }
+        .choise2 a:hover{
+            color: #ffd500;
+
+        }
+        .cuntinue{
+            opacity: 0;
+            width: 100%;
+            display: flex;
+            justify-content:flex-end;
+            transform: translateX(20px);
+            animation:  moveleft 2s ease-out forwards;
+        }
+        .cuntinue button{
+            cursor: pointer;
+            background-color: #ac63da;
+            border: none;
+            padding: 20px;
+            color: aliceblue;
+            font-size: 15px;
+            border-radius: 50px;
+            margin-right: 50px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+
+        }
+        .cuntinue button:hover{
+            background-color: #9519e2;
+
+        }
+
+        .active{
+            opacity: 0;
+            animation: moveUp 1s ease-out forwards;
+            transform: translateX(30px);
+            pointer-events: auto;
+        }
+        .inactive{
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: 0.1s;
+            pointer-events: none;
+        }
+        #goal{
+            text-indent: 20px;
+        }
+
+        .element:nth-child(1) { animation-delay: 0.3s; }
+        .element:nth-child(2) { animation-delay: 0.6s; }
+        .element:nth-child(3) { animation-delay: 0.6s; }
+
+
+        @keyframes moveUp {
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        @keyframes moveleft {
+            to {
+                opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          @keyframes gradiant{
+            to{
+                opacity: 1;
+                background-position: 200%;
+
+            } 
+          }
+
+          @font-face{
+            font-family: 'Yellowtail-Regular';
+            src: url('fonts/Yellowtail-Regular.ttf') format('truetype');
+          }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="main" class="element">
+            <div class="img" class="element">
+                <img  src="images\New Project (17).png" alt="4NCode" title="4NCode">
+                <h4>4NCode</h4>
+                <h4>&copy;Copyright 2025</h4>
+
+            </div>
+            <div class="main2">
+                <div class="bar">
+                    <span class="bar1" id="bar2"></span>
+                    <span class="bar1" id="bar3"></span>
+                </div>
+                <div class="main4">
+                    <div class="all welcome active element" >
+                        <h2 class="element">Welcome </h2>
+                    </div>
+                    <div class="all last_p ">
+                        <h2>Ready to code?💻</h2>
+                        <p>Explore our platform and turn ideas into real projects with hands-on tutorials! 🚀</p>
+                    </div>
+                    <div class="all first_p ">
+                        <h2>What can you learn here </h2>
+                        <div class="orders">
+                            <ul class="element">
+                                <li type="none" class="element" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Web Development </li>
+                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Mobile App Development</li>
+                            </ul>
+                            <ul class="element">
+                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Artificial Intelligence</li>
+                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Game Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="all last_p ">
+                        <p id="goal">The goal of this site is to help users learn and practice coding through simple, hands-on projects and tutorials.</p>
+                    </div>
+                    <div class="all choise ">
+                        <div class="choise2">
+                            <p>Please<a href="sign\sign_in.html">SIGN UP</a>or continue as a<a href="firstpage\first_page.html">GUST</a>to proceed.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="cuntinue">
+                    <button class="element"  id="changebutton" onclick="next()">continue</button> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const text = document.querySelectorAll('.main4 .all');
+        const change = document.getElementById('changebutton');
+        const bar = document.getElementById('bar2');
+
+        let cpt = 0;
+      
+        function next() {
+            text[cpt].classList.remove('active');
+            text[cpt].classList.add('inactive');
+        
+            cpt++;
+        
+            if (cpt < text.length) {
+              text[cpt].classList.add('active');
+              bar.style.transform = 'translateX(-100%)';
+
+            }
+            if (cpt == text.length - 4) {
+                bar.style.transform = 'translateX(-100%)';
+            }
+            if (cpt == text.length - 3) {
+                bar.style.transform = 'translateX(0)';
+            }
+            if (cpt == text.length - 2) {
+                bar.style.transform = 'translateX(100%)';
+            }
+            if (cpt == text.length - 1) {
+                bar.style.transform = 'translateX(200%)';
+                change.style.opacity = '0';
+                change.style.pointerEvents = 'none';
+                change.style.border = 'none';
+            }
+          }
+    </script>
+
+</body>
+</html>
