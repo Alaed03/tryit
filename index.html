@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/img1.png">  
-    <title>4ncode</title>
+    <title>sign up-4NCode</title>
     <style>
         html{
             height: 100%;
@@ -14,358 +14,346 @@
             margin: 0;
         }
         body{
-            display: flex;
-            min-width: 100%;
-            min-height: 100%;
-            background-image:url('images/smooth-gray-background-with-high-quality.jpg');
+            width: 100%;
+            height: 100%;
         }
         main{
             width: 100%;
             height: 100%;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-        }
-        .main{
-            background-color: #190033;
-            box-shadow: 0px 2px 10px 4px;
-            color: #000000;
-            width: 80%;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            transform: translateY(10px);
-            animation: moveUp 1s ease-out forwards;
-        }
-        .img{
-            margin: 50px;
-            padding-right: 40px;
-            opacity: 0;
-            border-right: solid 1px #ffffff;
-            height: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            transform: translateY(20px);
-            animation: moveUp 1s ease-out forwards;
+            align-items: center;
+            background-image: url('images/New\ Project\ \(32\).png');
+            background-size: 100%;
         }
-        .img img{
-            width: 250px;
-        }
-        .img h4{
-            color: #cfc8d3;
-        }
-        .img h4{
-            text-align:center;
-        }
-
         .main2{
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-        }
-        .bar{
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-
-        }
-        .bar1{
-            position: absolute;
-            top: 20px;
-        }
-        #bar2{
-            background-color: #6c12a4;
-            width: 18%;
-            height: 3px;
-            
-            z-index: 1111;
-            transform: translateX(-200%);
-            transition: 0.3s ease;
-        }
-        #bar3{
-            background-color: #c7c7c7;
-            width: 90%;
-            height: 3px;
-        }
-
-
-        .main4{
-            position:relative;
-            margin: 150px 0;
-            width: 100%;
-            height: 40vh;
-
-        }
-        .all{
-            position:absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            transform: translateX(100px);
-            pointer-events: none;
-        }
-        .welcome{
-            width: 100%;
-            text-align: center;
             margin: auto;
         }
-        .welcome h2{
-            font-size: 70px;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #e0b5fa, #be73ed, #9c2ce2,#a729f5,#e0b5fa);
-            background-size: 200%;
-            text-align: center;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding: 10px;
-            font-family: 'Yellowtail-Regular';
-            transform: translateX(20px);
-            animation:  gradiant 3s linear infinite;
+        .img{
+            width: 70%;
+            margin: 0px auto ;
+            display: flex;
+            flex-direction: column;
+            padding: 0 100px ;
         }
-        .first_p {
+        .img img{
+            width: 200px;
+        }
+        .img p{
+            font-size: 1.5rem;
+            width: 50%;
+            color: #240941;
+        }
+        .main3{
+            height: 100%;
+            width: 40%;
+            background-color: #190033;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0 20px;
+            padding: 30px;
+        }
+        .main3 form{
+            width: 100%;
+        }
+        .sign{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%
+        }
+
+        .sign a{
+            width: 50%;
+            color: #e8e8e8;
+        }
+        .sign h1{
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #ffffff;
+        }
+        #Layer_1{
+            width: 35px;
+            color: #e8e8e8;
+        }
+        #Layer_1:hover{
+            background-color: #bfbfbf2d;
+            border-radius: 50%;
+        }
+        .ifyou{
+            text-align: end;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin: 20px;
+            color: #e8e8e8;
+        }
+        .ifyou a{
+            text-decoration: none;
+            color: #9e43ff;
+        }
+        .ifyou a:hover{
+            color: #ffc343;
+        }
+        .inputs{
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 30px;
+            width: 100%;
+        }
+        .inputs1{
+            display: flex; 
+            justify-content: center; 
+            width: 100%;
+            margin: 20px;
+        }
+        .email_pass{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .input_name{
+            position: relative;
+            display: flex;
+            align-items:center;
+            width: 100%;
+            height: 50px;
+            margin:0px 10px;
 
         }
-        .first_p h2{
-            margin-bottom: 20px;
-            color: #cfc8d3;
-            text-align: center;
+
+        .input_name1{
+            padding: 0 15px;
+            font-size: 15px;
+            border: 1px solid #ededed;
+            background-color: transparent;
+            width: 100%;
+            line-height: 50px;
+            border-radius: 5px;
+            color: #ffffff;
+            transition: 0.05s ease;
+            z-index: 1111;
+            outline: none;
         }
-        .first_p .orders{
+
+        #message1{
+            width: 100%;
+            margin: 5px 10px;
+            height: 5px;
+            transition: 0.3s;
+        }
+        #message2{
+            width: 100%;
+            margin: 5px 10px;
+            height: 5px;
+            transition: 0.3s;
+        }
+        #message3{
+            width: 100%;
+            margin: 5px 10px;
+            height: 5px;
+            transition: 0.3s;
+        }
+        .lablline1{
+            position: absolute;
+            display: flex;
+            align-items: end;
+            width: max-content;
+            pointer-events: none;
+            font-size: 15px;
+            padding:0 20px;
+            transition: 0.2s ease;
+            height: 20px;
+            color: #ffffff;
+            background-color: transparent; 
+
+        }
+        .input_name1:focus,
+        .input_name1:valid{
+            border: 2px solid #ce80ffde ;
+        }
+        .input_name1:focus + .lablline1,
+        .input_name1:valid + .lablline1{
+            color: #a223f1de;
+            transform: translate(7px,-30px) scale(0.88);
+            z-index: 1111;
+            padding:0 8px;
+            background-color:#190033 ; 
+            background-position: right top;
+            width: max-content;
+        }
+        .submit{
+            width: 100%;
+            text-align: center;
+            height: 30px;
+        }
+        .submit input{
+            background-color: #a223f1de;
+            border: none;
+            color: #f9f9f9;
+            padding: 20px 50px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit input:hover{
+            background-color: #af49efde;
+        }
+        .other{
+            width: 100%;
+        }
+        .other ul{
             display: flex;
             flex-direction: row;
             justify-content: center;
             width: 100%;
         }
-        .orders ul{
-            margin: 0 20px;
-            opacity: 0;
-            transform: translateX(20px);
-            animation: moveUp 2s ease-out forwards;
+        .other ul li{
+            margin:5px 50px;
         }
-        .first_p li{
-            color: #ffffff;
-            margin: 20px 0;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-radius: 50px;
-            width: 100%;
-            padding: 7px 10px ;
-            transform: translateX(20px);
-            animation: moveUp 2s ease-out forwards;
-
+        .other ul li a{
+            text-decoration: none;
+            color: #3a3a3a;
         }
-        .last_p{
-            color: #cfc8d3;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 2rem;
-        }
-        .last_p h2{
-            margin-bottom: 5px;
-        }
-        .LeftSide{
-            margin: 0 10px;
-            color: #00bc00;
-        }
-
-        .choise{
-            display: flex;
-            flex-direction: column;
-            font-size: 2rem;
-        }
-
-        .choise2{
-            color: #aaaaaa;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            color: #cfc8d3;
-        }
-        .choise2 a{
-            margin: 0 15px;
-            color: #ffffff;
-            border-radius: 50px;
-            padding: 10px;
-        }
-        .choise2 a:hover{
-            color: #ffd500;
-
-        }
-        .cuntinue{
-            opacity: 0;
-            width: 100%;
-            display: flex;
-            justify-content:flex-end;
-            transform: translateX(20px);
-            animation:  moveleft 2s ease-out forwards;
-        }
-        .cuntinue button{
-            cursor: pointer;
-            background-color: #ac63da;
-            border: none;
-            padding: 20px;
-            color: aliceblue;
-            font-size: 15px;
-            border-radius: 50px;
-            margin-right: 50px;
-            margin-bottom: 10px;
-            transition: 0.3s;
-
-        }
-        .cuntinue button:hover{
-            background-color: #9519e2;
-
-        }
-
-        .active{
-            opacity: 0;
-            animation: moveUp 1s ease-out forwards;
-            transform: translateX(30px);
-            pointer-events: auto;
-        }
-        .inactive{
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: 0.1s;
-            pointer-events: none;
-        }
-        #goal{
-            text-indent: 20px;
-        }
-
-        .element:nth-child(1) { animation-delay: 0.3s; }
-        .element:nth-child(2) { animation-delay: 0.6s; }
-        .element:nth-child(3) { animation-delay: 0.6s; }
-
-
-        @keyframes moveUp {
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        @keyframes moveleft {
-            to {
-                opacity: 1;
-              transform: translateX(0);
-            }
-          }
-          @keyframes gradiant{
-            to{
-                opacity: 1;
-                background-position: 200%;
-
-            } 
-          }
-
-          @font-face{
-            font-family: 'Yellowtail-Regular';
-            src: url('fonts/Yellowtail-Regular.ttf') format('truetype');
+        .other li:hover{
+            background-color: rgba(128, 128, 128, 0.444);
+            border-radius: 5px;
+            
           }
     </style>
 </head>
 <body>
     <main>
-        <div class="main" class="element">
-            <div class="img" class="element">
-                <img  src="images\New Project (17).png" alt="4NCode" title="4NCode">
-                <h4>4NCode</h4>
-                <h4>&copy;Copyright 2025</h4>
-
+        <div class="main2">
+            <div class="img">
+                <img src="images\New Project (20) (1).png" alt="4NCode" >
+                <p>Unlock your full learning experience! 🚀 Sign Up to your account to save your progress, access exclusive coding tutorials, and build real projects step-by-step.</p>
             </div>
-            <div class="main2">
-                <div class="bar">
-                    <span class="bar1" id="bar2"></span>
-                    <span class="bar1" id="bar3"></span>
-                </div>
-                <div class="main4">
-                    <div class="all welcome active element" >
-                        <h2 class="element">Welcome </h2>
-                    </div>
-                    <div class="all last_p ">
-                        <h2>Ready to code?💻</h2>
-                        <p>Explore our platform and turn ideas into real projects with hands-on tutorials! 🚀</p>
-                    </div>
-                    <div class="all first_p ">
-                        <h2>What can you learn here </h2>
-                        <div class="orders">
-                            <ul class="element">
-                                <li type="none" class="element" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Web Development </li>
-                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Mobile App Development</li>
-                            </ul>
-                            <ul class="element">
-                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Artificial Intelligence</li>
-                                <li type="none" class="element"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="LeftSide"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>Game Development</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="all last_p ">
-                        <p id="goal">The goal of this site is to help users learn and practice coding through simple, hands-on projects and tutorials.</p>
-                    </div>
-                    <div class="all choise ">
-                        <div class="choise2">
-                            <p>Please<a href="sign\sign_in.html">SIGN UP</a>or continue as a<a href="firstpage\first_page.html">GUST</a>to proceed.</p>
-                        </div>
+            <div class="main3">
+                <form action="..\firstpage\first_page.html">
+                    <form action="connect.php" method="post">
+                        <div class="sign">
+                            <h1 class="insign">Sign Up</h1>
+                            <a class="insign" href="..\firstpage\first_page.html"  title="Home page"><svg id="Layer_1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 128 128"><path d="M48.1 29.1 13.2 64l34.9 34.9 5.7-5.7L28.5 68H92v-8H28.5l25.3-25.2zM104 60h8v8h-8z" fill="#ffffff" class="fill-000000"></path></svg></a>
 
-                    </div>
-                </div>
-                <div class="cuntinue">
-                    <button class="element"  id="changebutton" onclick="next()">continue</button> 
-                </div>
+                        </div>
+                        <div class="ifyou">
+                          <p>if you have an accont <a href="log_in.html">log in</a></p>
+                        </div>
+                        <div class="inputs">
+                              <div class="inputs1">
+                                  <div class="input_name">
+                                      <input class="input_name1"  id="first_name_input" type="text"  required>
+                                      <div class="lablline1">First Name</div>
+                                  </div>
+                                  <div class="input_name">
+                                      <input class="input_name1" id="last_name_input" type="text"  required>
+                                      <div class="lablline1">Last Name</div>
+                                  </div>
+                              </div>
+                              <div class="inputs1 email_pass">
+                                  <div class="input_name">
+                                      <input class="input_name1" id="email" type="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                      <div class="lablline1">Email</div>
+                                  </div>
+                                  <div id="message1"></div>
+                              </div>
+                              <div class="inputs1 email_pass">
+                                  <div class="input_name">
+                                      <input class="input_name1" id="password" type="password"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                      <div class="lablline1">password</div>
+                                  </div>
+                                  <div id="message2"></div>
+                              </div>
+                              <div class="inputs1 email_pass">
+                                <div class="input_name">
+                                    <input class="input_name1" id="confirm_password" type="password"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                    <div class="lablline1">confirm password</div>
+                                </div>
+                                <div id="message3"></div>
+                            </div>
+
+                        </div>
+                        <div class="submit">
+                            <input id="next"  type="submit" value="Sign Up" >
+                        </div>
+                    </form>
+                </form>
             </div>
         </div>
+        <div class="other">
+            <ul>
+                <li type="none"><a href="">Help</a></li>
+                <li type="none"><a href="">Privacy</a></li>
+                <li type="none"><a href="">Terms</a> </li>
+            </ul>
+        </div>
     </main>
+    <footer>
+        <div>
+
+
+        </div>
+    </footer>
     <script>
-        const text = document.querySelectorAll('.main4 .all');
-        const change = document.getElementById('changebutton');
-        const bar = document.getElementById('bar2');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const passwordconfirm = document.getElementById('confirm_password');
+        const message1 = document.getElementById('message1');
+        const message2 = document.getElementById('message2');
+        const message3 = document.getElementById('message3');
 
-        let cpt = 0;
+
       
-        function next() {
-            text[cpt].classList.remove('active');
-            text[cpt].classList.add('inactive');
-        
-            cpt++;
-        
-            if (cpt < text.length) {
-              text[cpt].classList.add('active');
-              bar.style.transform = 'translateX(-100%)';
-
-            }
-            if (cpt == text.length - 4) {
-                bar.style.transform = 'translateX(-100%)';
-            }
-            if (cpt == text.length - 3) {
-                bar.style.transform = 'translateX(0)';
-            }
-            if (cpt == text.length - 2) {
-                bar.style.transform = 'translateX(100%)';
-            }
-            if (cpt == text.length - 1) {
-                bar.style.transform = 'translateX(200%)';
-                change.style.opacity = '0';
-                change.style.pointerEvents = 'none';
-                change.style.border = 'none';
-            }
+        emailInput.addEventListener('input', function() {
+          const email = emailInput.value;
+          const patternemail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+      
+          if (patternemail.test(email)) {
+            message1.textContent = "Valid email!✅";
+            message1.style.color = "green";
+            message1.className = "valid";
+          } else {
+            message1.textContent = "Invalid email!";
+            message1.style.color = "red"
+            message1.className = "invalid";
           }
-    </script>
-
+        });
+      
+        passwordInput.addEventListener('input', function() {
+            const password = passwordInput.value;
+            const patternpassword =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;;
+        
+            if (patternpassword.test(password)) {
+                message2.textContent = "strong password!✅";
+                message2.style.color = "green";
+                message2.className = "valid";
+            } else {
+                message2.textContent = "Enter at least 8 characters, include A-Z a-z 0-9";
+                message2.style.color = "red"
+                message2.className = "invalid";
+            }
+          });
+          passwordconfirm.addEventListener('input', function() {
+            const passwordCON = passwordconfirm.value;
+            const password = passwordInput.value;
+        
+            if (passwordCON == password) {
+                message3.textContent = "correct";
+                message3.style.color = "green";
+                message3.className = "valid";
+            } else {
+                message3.textContent = "not the same password";
+                message3.style.color = "red"
+                message3.className = "invalid";
+            }
+          });
+      </script>
 </body>
 </html>
