@@ -233,30 +233,20 @@
         <div class="main2">
             <div class="img">
                 <img src="images\New Project (20) (1).png" alt="4NCode" >
-                <p>Unlock your full learning experience! 🚀 Sign Up to your account to save your progress, access exclusive coding tutorials, and build real projects step-by-step.</p>
+                <p>Unlock your full learning experience! 🚀 Log In to your account to save your progress, access exclusive coding tutorials, and build real projects step-by-step.</p>
             </div>
             <div class="main3">
                 <form action="..\firstpage\first_page.html">
                     <form action="connect.php" method="post">
                         <div class="sign">
-                            <h1 class="insign">Sign Up</h1>
-                            <a class="insign" href="..\firstpage\first_page.html"  title="Home page"><svg id="Layer_1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 128 128"><path d="M48.1 29.1 13.2 64l34.9 34.9 5.7-5.7L28.5 68H92v-8H28.5l25.3-25.2zM104 60h8v8h-8z" fill="#ffffff" class="fill-000000"></path></svg></a>
+                            <h1 class="insign">Log In</h1>
+                            <a class="insign" href="..\firstpage\first_page.html" title="Home page"><svg id="Layer_1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 128 128"><path d="M48.1 29.1 13.2 64l34.9 34.9 5.7-5.7L28.5 68H92v-8H28.5l25.3-25.2zM104 60h8v8h-8z" fill="#ffffff" class="fill-000000"></path></svg></a>
 
                         </div>
                         <div class="ifyou">
-                          <p>if you have an accont <a href="log_in.html">log in</a></p>
+                          <p>don't have an accont <a href="sign_in.html">Sign In</a></p>
                         </div>
                         <div class="inputs">
-                              <div class="inputs1">
-                                  <div class="input_name">
-                                      <input class="input_name1"  id="first_name_input" type="text"  required>
-                                      <div class="lablline1">First Name</div>
-                                  </div>
-                                  <div class="input_name">
-                                      <input class="input_name1" id="last_name_input" type="text"  required>
-                                      <div class="lablline1">Last Name</div>
-                                  </div>
-                              </div>
                               <div class="inputs1 email_pass">
                                   <div class="input_name">
                                       <input class="input_name1" id="email" type="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
@@ -271,17 +261,9 @@
                                   </div>
                                   <div id="message2"></div>
                               </div>
-                              <div class="inputs1 email_pass">
-                                <div class="input_name">
-                                    <input class="input_name1" id="confirm_password" type="password"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                                    <div class="lablline1">confirm password</div>
-                                </div>
-                                <div id="message3"></div>
-                            </div>
-
                         </div>
                         <div class="submit">
-                            <input id="next"  type="submit" value="Sign Up" >
+                            <input id="next"  type="submit" value="Log In" >
                         </div>
                     </form>
                 </form>
@@ -303,11 +285,7 @@
     </footer>
     <script>
         const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const passwordconfirm = document.getElementById('confirm_password');
         const message1 = document.getElementById('message1');
-        const message2 = document.getElementById('message2');
-        const message3 = document.getElementById('message3');
 
 
       
@@ -326,34 +304,6 @@
           }
         });
       
-        passwordInput.addEventListener('input', function() {
-            const password = passwordInput.value;
-            const patternpassword =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;;
-        
-            if (patternpassword.test(password)) {
-                message2.textContent = "strong password!✅";
-                message2.style.color = "green";
-                message2.className = "valid";
-            } else {
-                message2.textContent = "Enter at least 8 characters, include A-Z a-z 0-9";
-                message2.style.color = "red"
-                message2.className = "invalid";
-            }
-          });
-          passwordconfirm.addEventListener('input', function() {
-            const passwordCON = passwordconfirm.value;
-            const password = passwordInput.value;
-        
-            if (passwordCON == password) {
-                message3.textContent = "correct";
-                message3.style.color = "green";
-                message3.className = "valid";
-            } else {
-                message3.textContent = "not the same password";
-                message3.style.color = "red"
-                message3.className = "invalid";
-            }
-          });
       </script>
 </body>
 </html>
